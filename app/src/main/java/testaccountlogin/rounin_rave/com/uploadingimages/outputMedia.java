@@ -17,6 +17,10 @@ public class outputMedia {
     // directory name to store captured images and videos
     private static final String IMAGE_DIRECTORY_NAME = "Testing Camera";
     private static int MEDIA_TYPE_IMAGE = 1;
+
+    // File upload url (replace the ip with your server address)
+    public static final String FILE_UPLOAD_URL = "http://192.168.0.104/AndroidFileUpload/fileUpload.php";
+
     /**
      * Creating file uri to store image/video
      */
