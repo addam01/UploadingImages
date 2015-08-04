@@ -5,3 +5,4 @@ http://www.androidhive.info/2014/12/android-uploading-camera-image-video-to-serv
 http://www.tutorialspoint.com/android/android_camera.htm
 https://www.airpair.com/android/taking-pictures-android-fragment-intents
 http://carlenne.livejournal.com/89744.html
+http://rogerdudler.github.io/git-guide/
