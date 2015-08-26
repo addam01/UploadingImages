@@ -1,7 +1,5 @@
 package testaccountlogin.rounin_rave.com.uploadingimages;
 
-import android.app.Fragment;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -170,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             nameValuePairs.add(new BasicNameValuePair("ImageName", System.currentTimeMillis() + ".jpg"));
             try {
                 HttpClient httpclient = new DefaultHttpClient();
-                HttpPost httppost = new HttpPost(Server_config.SERVER_URL);
+                HttpPost httppost = new HttpPost(server_config.SERVER_URL);
                 httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                 HttpResponse response = httpclient.execute(httppost);
                 String st = EntityUtils.toString(response.getEntity());
