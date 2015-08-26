@@ -1,17 +1,20 @@
 package testaccountlogin.rounin_rave.com.uploadingimages;
 
+import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -86,6 +89,20 @@ public class UploadActivity extends AsyncTask<Void, Integer, String> {
 
         super.onPostExecute(result);
     }
+
+//    private void showAlert(String message) {
+//        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.);
+//        builder.setMessage(message).setTitle("Response from Servers")
+//                .setCancelable(false)
+//                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        // do nothing
+//                    }
+//                });
+//        AlertDialog alert = builder.create();
+//        alert.show();
+//    }
+
 
 }
 /*Done Step 10 at http://www.androidhive.info/2014/12/android-uploading-camera-image-video-to-server-with-progress-bar/*/
