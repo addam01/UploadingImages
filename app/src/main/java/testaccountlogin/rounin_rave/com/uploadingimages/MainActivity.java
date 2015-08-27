@@ -168,6 +168,13 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
             nameValuePairs.add(new BasicNameValuePair("base64", ba1));
             nameValuePairs.add(new BasicNameValuePair("ImageName", System.currentTimeMillis() + ".jpg"));
+            nameValuePairs.add(new BasicNameValuePair("pname", "Addam"));
+            nameValuePairs.add(new BasicNameValuePair("pdesc", "Testing"));
+            nameValuePairs.add(new BasicNameValuePair("plink", "https://www.youtube.com/watch?v=keAV2Zd0TvU&ab_channel=AnimeBallsDeep"));
+            nameValuePairs.add(new BasicNameValuePair("pfund", "100"));
+            nameValuePairs.add(new BasicNameValuePair("category", "Tech"));
+            nameValuePairs.add(new BasicNameValuePair("pledge", "Blablabla"));
+            nameValuePairs.add(new BasicNameValuePair("email", "addamtaisho@gmail.com"));
             try {
                 HttpClient httpclient = new DefaultHttpClient();
                 HttpPost httppost = new HttpPost(server_config.SERVER_URL);
@@ -185,6 +192,7 @@ public class MainActivity extends AppCompatActivity {
 
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
+            Log.v("log_tag", "done! ");
 //            pd.hide();
 //            pd.dismiss();
         }
