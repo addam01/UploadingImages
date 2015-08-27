@@ -105,6 +105,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Image
         Bitmap bm = BitmapFactory.decodeFile(picturePath);
+        //Resize to 50% of size
+        bm = Bitmap.createScaledBitmap(bm,(int)(bm.getWidth()*0.5),(int)(bm.getHeight()*0.5),true);
         ByteArrayOutputStream bao = new ByteArrayOutputStream();
         bm.compress(Bitmap.CompressFormat.JPEG, 90, bao);
         byte[] ba = bao.toByteArray();
